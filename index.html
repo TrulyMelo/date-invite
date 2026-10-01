@@ -40,6 +40,23 @@
     function showConfetti() {
       document.getElementById('confettiDiv').style.display = 'block';
       alert('Doom confirmed! 🎉 Check the date: ' + document.getElementById('date').value);
+      <script>
+  function addToCalendar() {
+    const dateVal = document.getElementById('date').value;
+    if (!dateVal) {
+      alert('Pick a date first!');
+      return;
+    }
+    const dateObj = new Date(dateVal);
+    const start = dateObj.toISOString().replace(/-|:|\.\d+/g, '');
+    const end = new Date(dateObj.getTime() + 2*60*60*1000).toISOString().replace(/-|:|\.\d+/g, '');
+   
+    const link = `https://zaf01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fcalendar.google.com%2Fcalendar%2Frender%3Faction%3DTEMPLATE%26text%3DDoomsday%2BDate%26dates%3D%24&data=05%7C02%7C44ha2507628%40myboston.co.za%7C3ef80a263d104a62f0bc08df1fb962cb%7C2aada6576d1e4320b92edd700921dda5%7C0%7C0%7C639264553246279904%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=U1eC21qXOH3DaO%2BiOgvFxsdAFOUEuW1oA9H6OKV2PEc%3D&reserved=0{start}/${end}&details=Marvel's+Doomsday+movie+premiere&location=The+Cinema`;
+    window.open(link, '_blank');
+    <button id="yes" onclick="addToCalendar()">Unleash Doom 😈</button>
+
+  }
+</script>
     }
   </script>
 </body>
