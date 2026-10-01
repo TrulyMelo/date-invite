@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date Invite</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      background: linear-gradient(to bottom, #e6e6fa, #c8a2c8);
+      color: white;
+    }
+    #yes { background: #4CAF50; padding: 10px 20px; font-size: 20px; }
+    #no { position: absolute; transition: 0.5s; }
+  </style>
+</head>
+<body>
+  <h1>Will you go on a date with me?</h1>
+  <p>I'll take you to get 🍣 sushi and 🍰 cake!</p>
+  <p>We can run 🏃‍♀️ and get art 🎨 supplies 😄</p>
+  <p>P.S. Nerd 🤓, I call you...</p>
+  <button id="yes" onclick="alert('"alert('Yay! 🎉')"')">Yes 😊</button>
+  <button id="no" onmouseover="moveNo()">No 😔</button>
+
+  <script>
+    function moveNo() {
+      const noBtn = document.getElementById('no');
+      noBtn.style.top = Math.random() * 80 + '%';
+      noBtn.style.left = Math.random() * 80 + '%';
+    }
+  </script>
+</body>
+</html>
